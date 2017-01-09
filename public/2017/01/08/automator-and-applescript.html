@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>automator and applescript</title>
-  <meta name="description" content="╚╚|░▄░|╝╝">
+  <meta name="description" content="This week I set up some macros on my computer to automate some useful tasks: - saving screenshots to weekly directories with customizable names- saving selec...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="sadieparker.xyz/2017/01/08/automator-and-applescript.html">
@@ -98,69 +98,110 @@
 
   <div class="content_section floating_element page-content">
   <div class="content_section_text post-content" itemprop="articleBody">
-    <p class="center robot">╚╚|░▄░|╝╝</p>
+    <p>This week I set up some macros on my computer to automate some useful tasks: 
+- saving screenshots to weekly directories with customizable names
+- saving selected text and the associated URL from Chrome directly in these markdown files to keep track of what I’m doing and learning</p>
+
+<p>My personal computer is a mac laptop running Sierra 10.12.2, so to do this I am using Applescript via Automator. This was my first time using either of these and I’m looking forward to learning more in the future.</p>
+
+<p>The reason for wanting to write these macros is because I feel like I’ve been learning a lot lately without having the foresight / hindsight to log it here, and these two shortcuts will push me along. As long as I’ve found at least one thing I want to screenshot or one string of text I want to save, I’ll automatically have the makings of a post started for myself.</p>
+
+<p class="center robot">╚╚|░▄░|╝╝</p>
 
 <ol>
-  <li><a href="#one">One</a></li>
-  <li><a href="#two">Two</a></li>
-  <li><a href="#three">Three</a></li>
+  <li>
+    <p><a href="#one">Keyboard Shortcuts and Automator</a></p>
+  </li>
+  <li>
+    <p><a href="#two">Applescript</a></p>
+  </li>
+  <li>
+    <p><a href="#three">Conclusion and Sources</a></p>
+  </li>
 </ol>
 
 <p class="center robot">╚╚|░▄░|╝╝</p>
 
-<h1 id="one" class="section_header">One</h1>
+<h1 id="one" class="section_header">Keyboard Shortcuts and Automator</h1>
 
-<h1 id="two" class="section_header">Two</h1>
+<p>Automator is straightforward. To get to know it I followed a basic walkthrough by David Sparks <a href="https://www.macsparky.com/blog/2008/3/2/automator-walkthrough-auto-save-and-load-wallpaper.html">here</a> wherein you can point Automator to Safari and save whatever image is open in your front browser window and set it as your wallpaper.</p>
 
-<h1 id="three" class="section_header">Three</h1>
+<p>My main goal with Automator in this case was to run some Applescript (discussed later) with a keyboard shortcut. As far as I know, a user’s route to set keyboard shortcuts on macs is by making Services, and we can make Services with Automator. There might be other ways, but this is the way that I found</p>
 
-<p>Smile 3.8.0 (build 959) full edition
-http://www.satimage.fr/software/en/downloads/index.html</p>
+<p class="center"><img src="/assets/images/2017-01-08/set_keyboard_shortcut.png" alt="set_keyboard_shortcut" /></p>
 
-<p>An AppleScript dialog textfield example
-http://alvinalexander.com/blog/post/mac-os-x/applescript-add-textfield-dialog</p>
+<p>In the image below, you see the Applescript as the only action for the Service saved as “chrome_selection_to_blog.” In the upper right hand corner of the screenshot you can see a gear turning – this indicates that a Service was running (one of the two I’m talking about here) when I was taking the screenshot. (Apologies if these images are small in this post – feel free to open in a new tab to see it larger).</p>
 
-<p>Automate taking a screenshot of specified area
-http://apple.stackexchange.com/questions/113416/automate-taking-a-screenshot-of-specified-area</p>
+<p class="center"><img src="/assets/images/2017-01-08/automator_sample_screenshot.png" alt="automator_sample_screenshot" /></p>
 
-<p>DateOfThisInstanceOfThisWeekdayBeforeOrAfterThisDate
-http://macscripter.net/viewtopic.php?id=24737</p>
+<h1 id="two" class="section_header">Applescript</h1>
 
-<p>How to add words to a text file using just open terminal command (no editors) and then save the text file
-http://askubuntu.com/questions/435291/how-to-add-words-to-a-text-file-using-just-open-terminal-command-no-editors-an</p>
+<p>To download the scripts themselves, go over to my <a href="https://github.com/spacerest/scripts_for_automator">scripts_for_automator repo</a>.</p>
 
-<p>An AppleScript list size example
-http://alvinalexander.com/apple/applescript-list-size-example-count-number</p>
+<p>The majority of what I learned in setting this up was about Applescript syntax. There are quite a few sources listed at the bottom of this post which highlight what I was searching to learn how to do. My favorite of my sources is <a href="http://macscripter.net/viewtopic.php?id=24737">this post about Applescript and dates</a> by Nigel Garvey, Kai Edwards and Adam Bell, which has comprehensive details about how to interact with dates and times 
+&gt; with a little mathematical forethought and the exploitation of some of the peculiarities of date variables and AppleScript[.]
+I needed this because of the weekly cycle I’m shooting for for these posts, so I need my scripts to check what day of the week it is and when the next Sunday is going to be to know where to save the content.</p>
 
-<p>AppleScript: How to split a string
-http://erikslab.com/2007/08/31/applescript-how-to-split-a-string/</p>
+<p>Something that challenges me, for whatever reason, is how AppleScript interacts with folders and files. I imagine this has something to do with the “everything is an object” theme I see in some languages, but it might be another aspect of it that confuses me. Anyway, a shortcut I took around this was by using lots of <code>do shell script</code> blocks so that I could interact with files and folders how I normally do from the command line. I hear that this has a negative impact on runtime, but I could be wrong.</p>
 
-<p>tell application “System Events”   keystroke “c” using command down end tell set theText to the clipboard
-http://macscripter.net/viewtopic.php?id=33575</p>
+<h1 id="three" class="section_header">Conclusion and Sources</h1>
 
-<p>Vimium
-https://vimium.github.io/</p>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>16 0x10 ANSI_Y
-http://apple.stackexchange.com/questions/36943/how-do-i-automate-a-key-press-in-applescript</p>
+<p>I’m happy that this is working so far. All the URLs and screenshots on this post were automatically included via these macros. I want to make a slight variation to the screenshot script so that I can do the same thing with gifs.</p>
 
-<p>Complete list of AppleScript key codes
-http://eastmanreference.com/complete-list-of-applescript-key-codes/</p>
+<h2 id="sources">Sources</h2>
 
-<p>Is there an easy way to clear/empty the clipboard?
-http://apple.stackexchange.com/questions/55146/is-there-an-easy-way-to-clear-empty-the-clipboard</p>
-
-<p>AUTOMATOR WALKTHROUGH - AUTO SAVE AND LOAD WALLPAPER
-https://www.macsparky.com/blog/2008/3/2/automator-walkthrough-auto-save-and-load-wallpaper.html</p>
-
-<p>Referencing Files and Folders
-https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html</p>
-
-<p>Rename only if needed
-https://forum.keyboardmaestro.com/t/rename-only-if-needed/1342</p>
-
-<p>Regular Expression or Wildcards in Applescript
-http://macscripter.net/viewtopic.php?id=34467</p>
+<ul>
+  <li>
+    <p><a href="http://www.satimage.fr/software/en/downloads/index.html">Smile 3.8.0 (build 959) full edition</a></p>
+  </li>
+  <li>
+    <p><a href="http://alvinalexander.com/blog/post/mac-os-x/applescript-add-textfield-dialog">An AppleScript dialog textfield example</a></p>
+  </li>
+  <li>
+    <p><a href="http://apple.stackexchange.com/questions/113416/automate-taking-a-screenshot-of-specified-area">Automate taking a screenshot of specified area</a></p>
+  </li>
+  <li>
+    <p><a href="http://macscripter.net/viewtopic.php?id=24737">DateOfThisInstanceOfThisWeekdayBeforeOrAfterThisDate</a></p>
+  </li>
+  <li>
+    <p><a href="http://askubuntu.com/questions/435291/how-to-add-words-to-a-text-file-using-just-open-terminal-command-no-editors-an">How to add words to a text file using just open terminal command (no editors) and then save the text file</a></p>
+  </li>
+  <li>
+    <p><a href="http://alvinalexander.com/apple/applescript-list-size-example-count-number">An AppleScript list size example</a></p>
+  </li>
+  <li>
+    <p><a href="http://erikslab.com/2007/08/31/applescript-how-to-split-a-string/">AppleScript: How to split a string</a></p>
+  </li>
+  <li>
+    <p><a href="http://macscripter.net/viewtopic.php?id=33575">tell application “System Events”   keystroke “c” using command down end tell set theText to the clipboard</a></p>
+  </li>
+  <li>
+    <p><a href="https://vimium.github.io/">Vimium</a></p>
+  </li>
+  <li>
+    <p><a href="http://apple.stackexchange.com/questions/36943/how-do-i-automate-a-key-press-in-applescript">16 0x10 ANSI_Y</a></p>
+  </li>
+  <li>
+    <p><a href="http://eastmanreference.com/complete-list-of-applescript-key-codes/">Complete list of AppleScript key codes</a></p>
+  </li>
+  <li>
+    <p><a href="http://apple.stackexchange.com/questions/55146/is-there-an-easy-way-to-clear-empty-the-clipboard">Is there an easy way to clear/empty the clipboard?</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.macsparky.com/blog/2008/3/2/automator-walkthrough-auto-save-and-load-wallpaper.html">AUTOMATOR WALKTHROUGH - AUTO SAVE AND LOAD WALLPAPER</a></p>
+  </li>
+  <li>
+    <p><a href="https://developer.apple.com/library/content/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/ReferenceFilesandFolders.html">Referencing Files and Folders in Applescript</a></p>
+  </li>
+  <li>
+    <p><a href="https://forum.keyboardmaestro.com/t/rename-only-if-needed/1342">Rename only if needed in Applescript</a></p>
+  </li>
+  <li>
+    <p><a href="http://macscripter.net/viewtopic.php?id=34467">Regular Expression or Wildcards in Applescript</a></p>
+  </li>
+</ul>
 
 
   </div>
