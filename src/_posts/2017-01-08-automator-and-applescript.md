@@ -7,12 +7,14 @@ categories:
 ---
 
 This week I set up some macros on my computer to automate some useful tasks: 
-- saving screenshots to weekly directories with customizable names
-- saving selected text and the associated URL from Chrome directly in these markdown files to keep track of what I'm doing and learning
+
+- having the option to name screenshots as I take them and save them to weekly directories
+
+- saving selected text and the associated URL from Chrome directly in these posts to keep track of what I'm doing and learning
 
 My personal computer is a mac laptop running Sierra 10.12.2, so to do this I am using Applescript via Automator. This was my first time using either of these and I'm looking forward to learning more in the future.
 
-The reason for wanting to write these macros is because I feel like I've been learning a lot lately without having the foresight / hindsight to log it here, and these two shortcuts will push me along. As long as I've found at least one thing I want to screenshot or one string of text I want to save, I'll automatically have the makings of a post started for myself.
+The reason for wanting to write these macros is because I feel like I've been learning a lot lately without having the foresight / hindsight to log it here, and these two shortcuts will push me along. As long as I've found at least one thing I want to screenshot or one string of text I want to save, I'll automatically have the makings of a "post of the week" started for myself.
 
 ╚╚\|░▄░\|╝╝
 {: class="center robot" }
