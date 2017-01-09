@@ -1,7 +1,12 @@
 ---
 layout: post
 title: blog comment hosting services
+comments: true
 ---
+
+╚╚\|░▄░\|╝╝
+{: class="center robot" }
+
 
 {: class="section_header"}
 Setting up commenting

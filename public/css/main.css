@@ -5,6 +5,11 @@
 h1, h2, h3, h4, h5, p, a, div, header, li, ul, ol, span {
   font-size: 12px; }
 
+.robot {
+  font-family: "Times New Roman" !important;
+  font-weight: 100 !important;
+  font-decoration: none !important; }
+
 body, html {
   padding: 3px 3px 3px 3px;
   background-color: #D8DBE2;
@@ -35,9 +40,15 @@ body, html {
 
 .table_of_contents {
   clear: left;
-  z-index: 5000;
   margin: 3px 3px 3px 3px;
   text-align: left; }
+  @media screen and (max-width: 800px) {
+    .table_of_contents {
+      z-index: 1; } }
+  @media screen and (max-width: 600px) {
+    .table_of_contents {
+      margin-left: 50px;
+      z-index: 5000; } }
 
 .table_of_contents_item {
   clear: left;
@@ -188,8 +199,6 @@ dl, dd, ol, ul, figure {
   width: 36px;
   height: 36px;
   text-align: center; }
-.site-nav .page-link, .nav-opaque .page-link {
-  margin-right: 20px; }
 @media screen and (max-width: 600px) {
   .site-nav, .nav-opaque {
     position: fixed; }
@@ -291,7 +300,9 @@ dl, dd, ol, ul, figure {
 
 .post-content {
   padding: 10px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  max-width: 100%;
+  word-wrap: break-word; }
 
 .placeholder {
   max-width: -webkit-calc(800px - (30px * 2));

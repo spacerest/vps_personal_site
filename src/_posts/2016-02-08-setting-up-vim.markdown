@@ -9,7 +9,7 @@ categories:
 Hey there! Today I'd like to set up my vim environment to eliminate some of the extra steps I've been taking when writing.
 
 ╚╚\|░▄░\|╝╝
-{: .center}
+{: class="center robot" }
 
 - My goals:
   1. [Have multiple vim windows up within one terminal window.](#goal1)
@@ -18,7 +18,7 @@ Hey there! Today I'd like to set up my vim environment to eliminate some of the 
   4. [Compile a list of the commands I'd like to be using regularly.](#goal3)
 - [Conclusion and sources.](#conclusion)
 
-{: .center}
+{: class="center robot" }
 ╚╚\|░▄░\|╝╝
 
 {: id="goal1" class="section_header"}

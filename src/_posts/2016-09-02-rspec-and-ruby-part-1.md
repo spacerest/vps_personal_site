@@ -6,6 +6,10 @@ comments: true
 categories: 
 ---
 
+╚╚\|░▄░\|╝╝
+{: class="center robot" }
+
+
 It's been a while since I posted last, but I've been learning quite a bit the past few months. 
 
 What I learned today:

@@ -7,6 +7,12 @@ h1,h2,h3,h4,h5,p,a,div,header,li,ul,ol,span {
   }
  font-size: 12px;
 }
+
+.robot {
+    font-family: "Times New Roman"!important;
+    font-weight: 100!important;
+    font-decoration: none!important;
+}
   body, html {
     padding: 3px 3px 3px 3px;
     //background-image: url("assets/images/blog_bg.jpg");
@@ -40,8 +46,14 @@ h1,h2,h3,h4,h5,p,a,div,header,li,ul,ol,span {
   }
   
  .table_of_contents {
+   @include media-query($on-laptop) {
+      z-index: 1;
+    } 
     clear: left;
-    z-index: 5000;
+    @include media-query($on-palm) {
+      margin-left: 50px;
+      z-index: 5000;
+    }
     //min-width: 200px;
     margin: 3px 3px 3px 3px;
    // background-color: #FFFFFF;
@@ -260,12 +272,8 @@ ul, ol, dl, figure {
 	text-align: center;
     }
     .page-link {
-        // Gaps between nav items, but not on the last one
-        //&:not(:last-child) {
-            margin-right: 20px;
-        //}
     }
-
+    
     @include media-query($on-palm) {
     .toc_show {
       display: none;
@@ -409,7 +417,8 @@ ul, ol, dl, figure {
 .post-content {
     padding: 10px;
     margin-bottom: $spacing-unit;
-
+    max-width: 100%;
+    word-wrap: break-word;
     h2 {
 
         @include media-query($on-laptop) {

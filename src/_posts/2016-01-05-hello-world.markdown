@@ -9,7 +9,7 @@ categories:
 This is my first of several posts keeping track of what I'm learning. As a TLDR warning, today's post is documentation for me to look back on ("Hey girl, here's where you started, look at what you've learned since then!"). I'm going to keep this particular site code-specific (i.e. you won't see any posts about how to break nail-biting habits or how to resurrect my dead plants). Right now, I'd like to touch on the following:  
 
 ╚╚\|░▄░\|╝╝
-{: .center}
+{: class="center robot" }
 
 1. [What relevant things/knowledge did I already have before setting out to put up this blog?](#already)
 
@@ -17,7 +17,7 @@ This is my first of several posts keeping track of what I'm learning. As a TLDR 
 
 3. [What are my next steps?](#next)
 
-{: .center}
+{: class="center robot"}
 ╚╚\|░▄░\|╝╝
 
 {: id="already" class="section_header"}
