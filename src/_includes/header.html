@@ -2,8 +2,8 @@
       <div class="placeholder floating_element wrap2">nothing here</div>
       <div class="page_header floating_element wrap2" id="trigger2">
  	  <img alt="box logo" src="/assets/images/logos/xyzlogo18.png" class="floating_element site_logo"/>
-          <img alt="{{ site.title }}" src="/assets/images/sadieparker_title4.png" class="floating_element site_title"/>
- 	  <div class="center_logo_title"><img alt="{{ smp box logo }}" src="/assets/images/logos/xyzlogotitle.png" class="site_logo_title"/></div>
+          <h1 class="floating_element site_title">s parker</h1>
+  	  <div class="center_logo_title"><img alt="{{ smp box logo }}" src="/assets/images/logos/xyzlogotitle.png" class="site_logo_title"/></div>
      </div>
 	  <script type="text/javascript" src="{{ "/assets/scripts/jquery-3.1.0.min.js"|  prepend: site.baseurl }}"></script>
 
@@ -22,6 +22,7 @@
 	  </a>
 	  </div>
       <div class="trigger">
+	<div class="mobile-nav">
         {% for my_page in site.pages %}
           {% if my_page.title %}
 	  <div class="table_of_contents_item floating_element"> 
@@ -29,7 +30,20 @@
 	  </div>
           {% endif %}
         {% endfor %}
+	</div>
       </div>
+
+    <div class="pc-nav">
+        {% for my_page in site.pages %}
+          {% if my_page.title %}
+	  <div class="table_of_contents_item floating_element"> 
+	    <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+	  </div>
+          {% endif %}
+        {% endfor %}
+	</div>
+
+
     </nav>
     </div>
 </header>

@@ -5,6 +5,11 @@
 h1, h2, h3, h4, h5, p, a, div, header, li, ul, ol, span {
   font-size: 12px; }
 
+h1.site_title {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 100; }
+
 .robot {
   font-family: "Times New Roman" !important;
   font-weight: 100 !important;
@@ -94,6 +99,8 @@ body, html {
 
 .section_header {
   padding: 3px 6px 3px 6px;
+  margin-top: 15px;
+  margin-bottom: 20px;
   width: 98%;
   background-color: #8E9CB2;
   color: #FFFFFF;
@@ -194,6 +201,13 @@ dl, dd, ol, ul, figure {
 /**
  * Site header
  */
+.site-nav .mobile-nav, .nav-opaque .mobile-nav {
+  display: none; }
+@media screen and (max-width: 800px) {
+  .site-nav .mobile-nav, .nav-opaque .mobile-nav {
+    display: none; }
+  .site-nav .pc-nav, .nav-opaque .pc-nav {
+    display: inline-block; } }
 .site-nav .menu-icon, .nav-opaque .menu-icon {
   display: none;
   width: 36px;
@@ -202,6 +216,19 @@ dl, dd, ol, ul, figure {
 @media screen and (max-width: 600px) {
   .site-nav, .nav-opaque {
     position: fixed; }
+    .site-nav .mobile-nav, .nav-opaque .mobile-nav {
+      display: inline-block;
+      background-color: #fff;
+      z-index: 5000;
+      width: 100vw;
+      position: fixed;
+      margin-top: 90px;
+      left: 0;
+      font-size: 20px;
+      border: solid 2px #cd214f;
+      border-radius: 5px; }
+    .site-nav .pc-nav, .nav-opaque .pc-nav {
+      display: none; }
     .site-nav .toc_show, .nav-opaque .toc_show {
       display: none; }
     .site-nav .menu-icon, .nav-opaque .menu-icon {
@@ -315,7 +342,7 @@ dl, dd, ol, ul, figure {
   max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
   font-size: 32px;
-  border-top: solid 2px #000000;
+  border: solid 2px #000000;
   position: fixed;
   display: inline-block;
   top: 0;

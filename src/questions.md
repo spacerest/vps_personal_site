@@ -13,3 +13,4 @@ permalink: /questions/
 7. What does [shift]-k do in vim?
 8. What's a makefile?
 9. Should I be storing gifs and images here in my root directory, or should I link to them over on imgur? 
+10. If php code is executed server-side, how is it possible to have multiple requests at a time?

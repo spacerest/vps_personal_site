@@ -7,7 +7,11 @@ h1,h2,h3,h4,h5,p,a,div,header,li,ul,ol,span {
   }
  font-size: 12px;
 }
-
+h1.site_title {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
 .robot {
     font-family: "Times New Roman"!important;
     font-weight: 100!important;
@@ -116,6 +120,8 @@ h1,h2,h3,h4,h5,p,a,div,header,li,ul,ol,span {
 
   .section_header {
     padding: 3px 6px 3px 6px;
+    margin-top: 15px;
+    margin-bottom: 20px;
     width: 98%;
     background-color: #8E9CB2;
     color: #FFFFFF;
@@ -265,6 +271,18 @@ ul, ol, dl, figure {
  * Site header
  */
 .site-nav {
+    .mobile-nav {
+	display:none;
+    }
+
+    @include media-query($on-laptop) {
+      .mobile-nav {
+	display:none;
+      }
+      .pc-nav {
+	display: inline-block;
+      }
+    }
     .menu-icon {
         display: none;
 	width: 36px;
@@ -275,6 +293,21 @@ ul, ol, dl, figure {
     }
     
     @include media-query($on-palm) {
+    .mobile-nav {
+      display: inline-block;
+      background-color: #fff;
+      z-index: 5000;
+      width: 100vw;
+      position: fixed;
+      margin-top: $header-height * 3;
+      left: 0;
+      font-size: 20px;
+      border: solid 2px $grey-color-dark;
+      border-radius: 5px;
+    }
+    .pc-nav {
+      display: none;
+    }
     .toc_show {
       display: none;
     }
@@ -450,7 +483,7 @@ ul, ol, dl, figure {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     font-size: $base-font-size * 2;
-    border-top: solid 2px #000000;
+    border: solid 2px #000000;
     position: fixed; 
     display: inline-block;
     top: 0;
@@ -460,6 +493,7 @@ ul, ol, dl, figure {
     margin-right: auto;
     height: 99px;
     background-color: #F5F6F7;
+
     z-index: 4500;
     .site_logo_title {
       display: none;
@@ -511,7 +545,7 @@ ul, ol, dl, figure {
   }
 
   .site_title { 
-    height: 30px;
+    height: $header-height;
     margin: 35px 40px;
     float: right;
     display: block;
