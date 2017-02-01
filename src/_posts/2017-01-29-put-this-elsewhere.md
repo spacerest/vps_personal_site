@@ -6,7 +6,17 @@ comments: true
 categories:
 ---
 
-OK, so... I haven't successfully posted every Sunday like I mentioned shooting for at the beginning of this month. The main roadblock I am running into is that it doesn't make sense to have a theme for the week assigned to a single date -- I need to be able to tag themes as I go along and organize posts later after I have enough related content to put up a post. 
+This post doesn't have a real theme besides what it means to me - minor setbacks and feelings of discouragement paired with some plans for the near future. 
+
+I set up some macros at the beginning of the month to make weekly posting more possible, and they need some reworking. The purpose of the macros so far is twofold:
+
+- take screenshots, name them appropriately, and save them automatically to a directory the corresponds to a weekly post
+
+- copy-paste useful quotes and their corresponding URLs to the weekly post
+
+The problem with this approach so far is that my studies over the course of the week don't naturally follow a particular route. I routinely find new things that stump me, and it's easy to get off track looking into them. 
+
+The solution is to not constrain new information to the time that I found it out (weekly) but to start keeping track of the common themes I find myself investigating. I'll still shoot for regular posts, but the content of the posts needs to follow theme and not time. 
 
 Below are the scattered links and pictures I've accumulated over the past couple of weeks. Like you can see, the content and the titles / themes of the posts don't match. I'll rework the logic behind this macro to make it usable over the course of this week.
 
